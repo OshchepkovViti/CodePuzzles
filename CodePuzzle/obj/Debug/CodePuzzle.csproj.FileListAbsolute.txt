@@ -12,3 +12,5 @@ C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\o
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.pdb
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.singup.resources
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.main.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.CreateTest.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.TestInfo.resources

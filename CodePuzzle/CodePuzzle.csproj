@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConectData.cs" />
+    <Compile Include="CreateTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTest.Designer.cs">
+      <DependentUpon>CreateTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="linq.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,7 +93,17 @@
     <Compile Include="singup.Designer.cs">
       <DependentUpon>singup.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestInf.cs" />
+    <Compile Include="TestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestInfo.Designer.cs">
+      <DependentUpon>TestInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="user.cs" />
+    <EmbeddedResource Include="CreateTest.resx">
+      <DependentUpon>CreateTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="singup.resx">
       <DependentUpon>singup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestInfo.resx">
+      <DependentUpon>TestInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="linq.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -151,6 +170,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Puzzle.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Config.png" />
+    <None Include="Resources\add-user.png" />
     <None Include="Resources\AllDay.ru.png" />
     <None Include="Resources\basket.png" />
     <None Include="Resources\shared_folder.png" />

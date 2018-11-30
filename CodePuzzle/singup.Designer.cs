@@ -113,13 +113,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LemonChiffon;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(31, 249);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(222, 57);
             this.button1.TabIndex = 8;
             this.button1.Text = "Створити";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // singup

@@ -10,15 +10,6 @@
       <Column Name="surname" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.test" Member="test">
-    <Type Name="test">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="lvl" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="language" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
-      <Column Name="theme" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-    </Type>
-  </Table>
   <Table Name="dbo.task_struct" Member="task_struct">
     <Type Name="task_struct">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -36,6 +27,16 @@
       <Column Name="point" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="[group]" Member="group" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
       <Column Name="datatime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.test" Member="test">
+    <Type Name="test">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="lvl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="language" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
+      <Column Name="theme" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

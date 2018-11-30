@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -90,6 +92,32 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LemonChiffon;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Image = global::CodePuzzle.Properties.Resources.Config;
+            this.button6.Location = new System.Drawing.Point(171, 238);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(115, 113);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Редагувати тест";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LemonChiffon;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Image = global::CodePuzzle.Properties.Resources.add_user;
+            this.button5.Location = new System.Drawing.Point(325, 238);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(115, 113);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Користувачі";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LemonChiffon;
@@ -102,6 +130,7 @@
             this.button4.Text = "Створити Тест";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -177,14 +206,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(455, 528);
+            this.ClientSize = new System.Drawing.Size(455, 360);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "main";
-            this.Text = "main";
+            this.Text = "Головне меню";
             this.Load += new System.EventHandler(this.main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -206,5 +237,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
