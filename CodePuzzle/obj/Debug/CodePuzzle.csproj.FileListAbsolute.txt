@@ -1,0 +1,13 @@
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\bin\Debug\Puzzle.mdf
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\bin\Debug\Puzzle_log.ldf
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\bin\Debug\CodePuzzle.exe.config
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\bin\Debug\CodePuzzle.exe
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\bin\Debug\CodePuzzle.pdb
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.csprojAssemblyReference.cache
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.singin.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.Properties.Resources.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.csproj.GenerateResource.cache
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.csproj.CoreCompileInputs.cache
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.exe
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.pdb
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.singup.resources

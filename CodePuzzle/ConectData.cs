@@ -8,6 +8,6 @@ namespace CodePuzzle
 {
     class ConectData
     {
-        public static SqlConnection conn = new SqlConnection(@" Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\data_code.mdf;Integrated Security=True");
+        public static SqlConnection conn = new SqlConnection(@" Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Puzzle.mdf;Integrated Security=True");
     }
 }
