@@ -33,15 +33,15 @@ namespace CodePuzzle
     partial void Insertusers(users instance);
     partial void Updateusers(users instance);
     partial void Deleteusers(users instance);
-    partial void Inserttask_struct(task_struct instance);
-    partial void Updatetask_struct(task_struct instance);
-    partial void Deletetask_struct(task_struct instance);
     partial void Insertresult(result instance);
     partial void Updateresult(result instance);
     partial void Deleteresult(result instance);
     partial void Inserttest(test instance);
     partial void Updatetest(test instance);
     partial void Deletetest(test instance);
+    partial void Inserttask_struct(task_struct instance);
+    partial void Updatetask_struct(task_struct instance);
+    partial void Deletetask_struct(task_struct instance);
     #endregion
 		
 		public linqDataContext() : 
@@ -82,14 +82,6 @@ namespace CodePuzzle
 			}
 		}
 		
-		public System.Data.Linq.Table<task_struct> task_struct
-		{
-			get
-			{
-				return this.GetTable<task_struct>();
-			}
-		}
-		
 		public System.Data.Linq.Table<result> result
 		{
 			get
@@ -103,6 +95,14 @@ namespace CodePuzzle
 			get
 			{
 				return this.GetTable<test>();
+			}
+		}
+		
+		public System.Data.Linq.Table<task_struct> task_struct
+		{
+			get
+			{
+				return this.GetTable<task_struct>();
 			}
 		}
 	}
@@ -264,164 +264,6 @@ namespace CodePuzzle
 					this._surname = value;
 					this.SendPropertyChanged("surname");
 					this.OnsurnameChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.task_struct")]
-	public partial class task_struct : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private System.Nullable<int> _id_test;
-		
-		private System.Nullable<int> _position;
-		
-		private System.Nullable<int> _position_poit;
-		
-		private string _code_text;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void Onid_testChanging(System.Nullable<int> value);
-    partial void Onid_testChanged();
-    partial void OnpositionChanging(System.Nullable<int> value);
-    partial void OnpositionChanged();
-    partial void Onposition_poitChanging(System.Nullable<int> value);
-    partial void Onposition_poitChanged();
-    partial void Oncode_textChanging(string value);
-    partial void Oncode_textChanged();
-    #endregion
-		
-		public task_struct()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_test", DbType="Int")]
-		public System.Nullable<int> id_test
-		{
-			get
-			{
-				return this._id_test;
-			}
-			set
-			{
-				if ((this._id_test != value))
-				{
-					this.Onid_testChanging(value);
-					this.SendPropertyChanging();
-					this._id_test = value;
-					this.SendPropertyChanged("id_test");
-					this.Onid_testChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position", DbType="Int")]
-		public System.Nullable<int> position
-		{
-			get
-			{
-				return this._position;
-			}
-			set
-			{
-				if ((this._position != value))
-				{
-					this.OnpositionChanging(value);
-					this.SendPropertyChanging();
-					this._position = value;
-					this.SendPropertyChanged("position");
-					this.OnpositionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position_poit", DbType="Int")]
-		public System.Nullable<int> position_poit
-		{
-			get
-			{
-				return this._position_poit;
-			}
-			set
-			{
-				if ((this._position_poit != value))
-				{
-					this.Onposition_poitChanging(value);
-					this.SendPropertyChanging();
-					this._position_poit = value;
-					this.SendPropertyChanged("position_poit");
-					this.Onposition_poitChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code_text", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string code_text
-		{
-			get
-			{
-				return this._code_text;
-			}
-			set
-			{
-				if ((this._code_text != value))
-				{
-					this.Oncode_textChanging(value);
-					this.SendPropertyChanging();
-					this._code_text = value;
-					this.SendPropertyChanged("code_text");
-					this.Oncode_textChanged();
 				}
 			}
 		}
@@ -786,6 +628,188 @@ namespace CodePuzzle
 					this._name = value;
 					this.SendPropertyChanged("name");
 					this.OnnameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.task_struct")]
+	public partial class task_struct : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private System.Nullable<int> _id_test;
+		
+		private System.Nullable<int> _position;
+		
+		private string _code_text;
+		
+		private string _code_text2;
+		
+		private System.Nullable<int> _handwork;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void Onid_testChanging(System.Nullable<int> value);
+    partial void Onid_testChanged();
+    partial void OnpositionChanging(System.Nullable<int> value);
+    partial void OnpositionChanged();
+    partial void Oncode_textChanging(string value);
+    partial void Oncode_textChanged();
+    partial void Oncode_text2Changing(string value);
+    partial void Oncode_text2Changed();
+    partial void OnhandworkChanging(System.Nullable<int> value);
+    partial void OnhandworkChanged();
+    #endregion
+		
+		public task_struct()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_test", DbType="Int")]
+		public System.Nullable<int> id_test
+		{
+			get
+			{
+				return this._id_test;
+			}
+			set
+			{
+				if ((this._id_test != value))
+				{
+					this.Onid_testChanging(value);
+					this.SendPropertyChanging();
+					this._id_test = value;
+					this.SendPropertyChanged("id_test");
+					this.Onid_testChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_position", DbType="Int")]
+		public System.Nullable<int> position
+		{
+			get
+			{
+				return this._position;
+			}
+			set
+			{
+				if ((this._position != value))
+				{
+					this.OnpositionChanging(value);
+					this.SendPropertyChanging();
+					this._position = value;
+					this.SendPropertyChanged("position");
+					this.OnpositionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code_text", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string code_text
+		{
+			get
+			{
+				return this._code_text;
+			}
+			set
+			{
+				if ((this._code_text != value))
+				{
+					this.Oncode_textChanging(value);
+					this.SendPropertyChanging();
+					this._code_text = value;
+					this.SendPropertyChanged("code_text");
+					this.Oncode_textChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code_text2", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string code_text2
+		{
+			get
+			{
+				return this._code_text2;
+			}
+			set
+			{
+				if ((this._code_text2 != value))
+				{
+					this.Oncode_text2Changing(value);
+					this.SendPropertyChanging();
+					this._code_text2 = value;
+					this.SendPropertyChanged("code_text2");
+					this.Oncode_text2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_handwork", DbType="Int")]
+		public System.Nullable<int> handwork
+		{
+			get
+			{
+				return this._handwork;
+			}
+			set
+			{
+				if ((this._handwork != value))
+				{
+					this.OnhandworkChanging(value);
+					this.SendPropertyChanging();
+					this._handwork = value;
+					this.SendPropertyChanged("handwork");
+					this.OnhandworkChanged();
 				}
 			}
 		}
