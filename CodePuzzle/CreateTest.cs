@@ -12,6 +12,7 @@ namespace CodePuzzle
 {
     public partial class CreateTest : Form
     {
+        linqDataContext db;
         public CreateTest()
         {
             InitializeComponent();
@@ -43,6 +44,58 @@ namespace CodePuzzle
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+
+                db = new linqDataContext();
+                test pinfo = new test();
+                pinfo.lvl = TestInf.lvl;
+                pinfo.language = TestInf.language;
+                pinfo.theme = TestInf.theme;
+                pinfo.description = TestInf.descript;
+                pinfo.name = TestInf.name;
+                db.SubmitChanges();
+
+
+                var uinfo = db.test.Where(w => w.name == TestInf.name &&  w.theme == TestInf.theme && w.description == TestInf.descript).FirstOrDefault();
+
+                task_struct pcode = new task_struct();
+                for (int i = 0;i < dataGridView1.RowCount;i++)
+                {
+                    pcode.id_test = uinfo.Id;
+                    pcode.position = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value.ToString());
+
+                    if (TestInf.lvl == "Легкий")
+                    {
+                        pcode.code_text=dataGridView1.Rows[i].Cells[1].Value.ToString();
+
+                    }
+                    if (TestInf.lvl == "Середній")
+                    {
+                        pcode.code_text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                        pcode.code_text2 = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    }
+                    if (TestInf.lvl == "Складний")
+                    {
+                        pcode.handwork = Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                        pcode.code_text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    }
+
+                }
+               
+
+                MessageBox.Show("Тест успішно додано");
+                this.Close();
+
+
+            }
+            catch { }
         }
     }
 }

@@ -36,12 +36,12 @@ namespace CodePuzzle
     partial void Insertresult(result instance);
     partial void Updateresult(result instance);
     partial void Deleteresult(result instance);
-    partial void Inserttest(test instance);
-    partial void Updatetest(test instance);
-    partial void Deletetest(test instance);
     partial void Inserttask_struct(task_struct instance);
     partial void Updatetask_struct(task_struct instance);
     partial void Deletetask_struct(task_struct instance);
+    partial void Inserttest(test instance);
+    partial void Updatetest(test instance);
+    partial void Deletetest(test instance);
     #endregion
 		
 		public linqDataContext() : 
@@ -90,19 +90,19 @@ namespace CodePuzzle
 			}
 		}
 		
-		public System.Data.Linq.Table<test> test
-		{
-			get
-			{
-				return this.GetTable<test>();
-			}
-		}
-		
 		public System.Data.Linq.Table<task_struct> task_struct
 		{
 			get
 			{
 				return this.GetTable<task_struct>();
+			}
+		}
+		
+		public System.Data.Linq.Table<test> test
+		{
+			get
+			{
+				return this.GetTable<test>();
 			}
 		}
 	}
@@ -471,188 +471,6 @@ namespace CodePuzzle
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.test")]
-	public partial class test : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private System.Nullable<int> _lvl;
-		
-		private string _language;
-		
-		private string _theme;
-		
-		private string _description;
-		
-		private string _name;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnlvlChanging(System.Nullable<int> value);
-    partial void OnlvlChanged();
-    partial void OnlanguageChanging(string value);
-    partial void OnlanguageChanged();
-    partial void OnthemeChanging(string value);
-    partial void OnthemeChanged();
-    partial void OndescriptionChanging(string value);
-    partial void OndescriptionChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    #endregion
-		
-		public test()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lvl", DbType="Int")]
-		public System.Nullable<int> lvl
-		{
-			get
-			{
-				return this._lvl;
-			}
-			set
-			{
-				if ((this._lvl != value))
-				{
-					this.OnlvlChanging(value);
-					this.SendPropertyChanging();
-					this._lvl = value;
-					this.SendPropertyChanged("lvl");
-					this.OnlvlChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_language", DbType="NChar(80)")]
-		public string language
-		{
-			get
-			{
-				return this._language;
-			}
-			set
-			{
-				if ((this._language != value))
-				{
-					this.OnlanguageChanging(value);
-					this.SendPropertyChanging();
-					this._language = value;
-					this.SendPropertyChanged("language");
-					this.OnlanguageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_theme", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string theme
-		{
-			get
-			{
-				return this._theme;
-			}
-			set
-			{
-				if ((this._theme != value))
-				{
-					this.OnthemeChanging(value);
-					this.SendPropertyChanging();
-					this._theme = value;
-					this.SendPropertyChanged("theme");
-					this.OnthemeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string description
-		{
-			get
-			{
-				return this._description;
-			}
-			set
-			{
-				if ((this._description != value))
-				{
-					this.OndescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._description = value;
-					this.SendPropertyChanged("description");
-					this.OndescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NChar(10)")]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this.OnnameChanging(value);
-					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.task_struct")]
 	public partial class task_struct : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -810,6 +628,188 @@ namespace CodePuzzle
 					this._handwork = value;
 					this.SendPropertyChanged("handwork");
 					this.OnhandworkChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.test")]
+	public partial class test : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _lvl;
+		
+		private string _language;
+		
+		private string _theme;
+		
+		private string _description;
+		
+		private string _name;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnlvlChanging(string value);
+    partial void OnlvlChanged();
+    partial void OnlanguageChanging(string value);
+    partial void OnlanguageChanged();
+    partial void OnthemeChanging(string value);
+    partial void OnthemeChanged();
+    partial void OndescriptionChanging(string value);
+    partial void OndescriptionChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    #endregion
+		
+		public test()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lvl", DbType="NChar(30)")]
+		public string lvl
+		{
+			get
+			{
+				return this._lvl;
+			}
+			set
+			{
+				if ((this._lvl != value))
+				{
+					this.OnlvlChanging(value);
+					this.SendPropertyChanging();
+					this._lvl = value;
+					this.SendPropertyChanged("lvl");
+					this.OnlvlChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_language", DbType="NChar(80)")]
+		public string language
+		{
+			get
+			{
+				return this._language;
+			}
+			set
+			{
+				if ((this._language != value))
+				{
+					this.OnlanguageChanging(value);
+					this.SendPropertyChanging();
+					this._language = value;
+					this.SendPropertyChanged("language");
+					this.OnlanguageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_theme", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string theme
+		{
+			get
+			{
+				return this._theme;
+			}
+			set
+			{
+				if ((this._theme != value))
+				{
+					this.OnthemeChanging(value);
+					this.SendPropertyChanging();
+					this._theme = value;
+					this.SendPropertyChanged("theme");
+					this.OnthemeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string description
+		{
+			get
+			{
+				return this._description;
+			}
+			set
+			{
+				if ((this._description != value))
+				{
+					this.OndescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._description = value;
+					this.SendPropertyChanged("description");
+					this.OndescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NChar(80)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}

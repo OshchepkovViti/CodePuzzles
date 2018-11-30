@@ -14,16 +14,16 @@
         <elementListCompartment Id="fdc12c54-a317-469b-9677-8d6f1b1548f1" absoluteBounds="6.015, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="30504e5f-e116-4fc9-b1ec-623160f32403" absoluteBounds="3.125, 6, 2, 1.9631982421875">
-      <DataClassMoniker Name="/linqDataContext/test" />
-      <nestedChildShapes>
-        <elementListCompartment Id="48fee732-866c-4e14-9adc-e1756760aa07" absoluteBounds="3.14, 6.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="250473e5-2032-4faf-a122-141f552b0c01" absoluteBounds="6.25, 2.75, 2, 1.9631982421875">
       <DataClassMoniker Name="/linqDataContext/task_struct" />
       <nestedChildShapes>
         <elementListCompartment Id="1dbf8015-32d1-40a0-b168-e6f54ab9bd4f" absoluteBounds="6.265, 3.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e8e220b-0cfc-4da2-b5da-209119063847" absoluteBounds="2.625, 5.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqDataContext/test" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7a8c271-3a35-4dd1-a762-07dfdcd81656" absoluteBounds="2.64, 6.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
