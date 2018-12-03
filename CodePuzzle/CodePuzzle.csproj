@@ -74,6 +74,12 @@
     <Compile Include="CreateTest.Designer.cs">
       <DependentUpon>CreateTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoTest.Designer.cs">
+      <DependentUpon>DoTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="linq.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +105,7 @@
     <Compile Include="singup.Designer.cs">
       <DependentUpon>singup.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestGoInfo.cs" />
     <Compile Include="TestInf.cs" />
     <Compile Include="TestInfo.cs">
       <SubType>Form</SubType>
@@ -112,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateTest.resx">
       <DependentUpon>CreateTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoTest.resx">
+      <DependentUpon>DoTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

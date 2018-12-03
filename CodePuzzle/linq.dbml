@@ -33,11 +33,18 @@
   <Table Name="dbo.test" Member="test">
     <Type Name="test">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
       <Column Name="lvl" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
       <Column Name="language" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
       <Column Name="theme" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="name" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lib" Member="lib">
+    <Type Name="lib">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="theme" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="url" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
 </Database>

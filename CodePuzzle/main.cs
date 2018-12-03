@@ -40,5 +40,11 @@ namespace CodePuzzle
             var fr = new TestInfo();
             fr.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var fr = new ChooseTest();
+            fr.Show();
+        }
     }
 }
