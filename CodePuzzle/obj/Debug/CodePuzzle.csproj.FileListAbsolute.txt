@@ -15,3 +15,4 @@ C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\o
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.csproj.CoreCompileInputs.cache
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.exe
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.pdb
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.DoTest.resources

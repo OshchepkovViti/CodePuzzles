@@ -29,6 +29,7 @@ namespace CodePuzzle
 
                 var fr = new CreateTest();
                 fr.Show();
+                Hide();
             }
             else { MessageBox.Show("Заповніть всі поля"); }
 
