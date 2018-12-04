@@ -49,8 +49,8 @@ namespace CodePuzzle
         private void button2_Click(object sender, EventArgs e)
         {
 
-        //    try
-         //   {
+            try
+            {
 
 
                 db = new linqDataContext();
@@ -77,7 +77,7 @@ namespace CodePuzzle
             {
                 task_struct pcode = new task_struct();
                 pcode.id_test = uinfo;
-                MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
+             
                     pcode.position = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value.ToString());
 
                     if (TestInf.lvl == "Легкий")
@@ -105,8 +105,8 @@ namespace CodePuzzle
                 this.Close();
 
 
-        //    }
-        //    catch { MessageBox.Show("Помилка добавлення"); }
+           }
+           catch { MessageBox.Show("Помилка добавлення"); }
         }
     }
 }
