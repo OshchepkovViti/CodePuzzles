@@ -33,10 +33,11 @@ namespace CodePuzzle
             db = new linqDataContext();
 
             var cinfo = from t in db.task_struct
-                        where (t.Id==TestGoInfo.id)
-                                orderby t.code_text  
+                        where (t.Id == TestGoInfo.id)
+                        orderby t.Id
                                 select t;
-            headerText();
+            dataGridView1.DataSource = cinfo.ToList();
+            //    headerText();
         }
         public void headerText()
         {
