@@ -88,7 +88,7 @@ namespace CodePuzzle
                     if (TestInf.lvl == "Середній")
                     {
                         pcode.code_text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                        pcode.code_text2 = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                     if(dataGridView1.Rows[i].Cells[2].Value.ToString() != "")   pcode.code_text2 = dataGridView1.Rows[i].Cells[2].Value.ToString();
                     }
                     if (TestInf.lvl == "Складний")
                     {

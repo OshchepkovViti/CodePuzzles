@@ -86,7 +86,8 @@ namespace CodePuzzle
             try
             {
                 var uinfo = db.test.Where(w => w.Id == id).FirstOrDefault();
-                TestGoInfo.id = id;    
+                TestGoInfo.id = id;
+                TestGoInfo.lvl = uinfo.lvl;
                 TestGoInfo.descript = uinfo.description;
               
 

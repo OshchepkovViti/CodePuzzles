@@ -36,18 +36,50 @@ namespace CodePuzzle
                         where (t.Id == TestGoInfo.id)
                         orderby t.Id
                                 select t;
-            dataGridView1.DataSource = cinfo.ToList();
-            //    headerText();
+            dataGridView3.DataSource = cinfo.ToList();
+               headerText();
+            sortItem();
+        }
+        public void sortItem()
+        {
+
+            for (int i= 0; i< dataGridView3.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Cells[0].Value = dataGridView3.Rows[i].Cells[0].Value.ToString();
+
+            }
+
+
         }
         public void headerText()
         {
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].HeaderText = "code";
-            dataGridView1.Columns[4].HeaderText = "Code";
-            dataGridView1.Columns[5].Visible = false;
-
+            if (TestGoInfo.lvl == "Легкий")
+            {
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].Visible = false;
+                dataGridView1.Columns[2].Visible = false;
+                dataGridView1.Columns[3].HeaderText = "code";
+                dataGridView1.Columns[4].Visible = false;
+                dataGridView1.Columns[5].Visible = false;
+            }
+            if (TestGoInfo.lvl == "Середній")
+            {
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].Visible = false;
+                dataGridView1.Columns[2].Visible = false;
+                dataGridView1.Columns[3].HeaderText = "code";
+                dataGridView1.Columns[4].HeaderText = "Code";
+                dataGridView1.Columns[5].Visible = false;
+            }
+            if (TestGoInfo.lvl == "Складний")
+            {
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].Visible = false;
+                dataGridView1.Columns[2].Visible = false;
+                dataGridView1.Columns[3].HeaderText = "code";
+                dataGridView1.Columns[4].Visible = false;
+                dataGridView1.Columns[5].Visible = false;
+            }
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
