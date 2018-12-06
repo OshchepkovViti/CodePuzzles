@@ -101,12 +101,12 @@
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(537, 534);
+            this.dataGridView3.Location = new System.Drawing.Point(538, 532);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView3.Size = new System.Drawing.Size(10, 10);
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.Visible = false;
             // 
