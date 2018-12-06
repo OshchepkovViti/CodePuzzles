@@ -33,9 +33,6 @@ namespace CodePuzzle
     partial void Insertusers(users instance);
     partial void Updateusers(users instance);
     partial void Deleteusers(users instance);
-    partial void Insertresult(result instance);
-    partial void Updateresult(result instance);
-    partial void Deleteresult(result instance);
     partial void Inserttask_struct(task_struct instance);
     partial void Updatetask_struct(task_struct instance);
     partial void Deletetask_struct(task_struct instance);
@@ -45,6 +42,9 @@ namespace CodePuzzle
     partial void Insertlib(lib instance);
     partial void Updatelib(lib instance);
     partial void Deletelib(lib instance);
+    partial void Insertresult(result instance);
+    partial void Updateresult(result instance);
+    partial void Deleteresult(result instance);
     #endregion
 		
 		public linqDataContext() : 
@@ -85,14 +85,6 @@ namespace CodePuzzle
 			}
 		}
 		
-		public System.Data.Linq.Table<result> result
-		{
-			get
-			{
-				return this.GetTable<result>();
-			}
-		}
-		
 		public System.Data.Linq.Table<task_struct> task_struct
 		{
 			get
@@ -114,6 +106,14 @@ namespace CodePuzzle
 			get
 			{
 				return this.GetTable<lib>();
+			}
+		}
+		
+		public System.Data.Linq.Table<result> result
+		{
+			get
+			{
+				return this.GetTable<result>();
 			}
 		}
 	}
@@ -275,188 +275,6 @@ namespace CodePuzzle
 					this._surname = value;
 					this.SendPropertyChanged("surname");
 					this.OnsurnameChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.result")]
-	public partial class result : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private System.Nullable<int> _id_user;
-		
-		private System.Nullable<int> _id_test;
-		
-		private System.Nullable<int> _point;
-		
-		private string _group;
-		
-		private System.Nullable<System.DateTime> _datatime;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void Onid_userChanging(System.Nullable<int> value);
-    partial void Onid_userChanged();
-    partial void Onid_testChanging(System.Nullable<int> value);
-    partial void Onid_testChanged();
-    partial void OnpointChanging(System.Nullable<int> value);
-    partial void OnpointChanged();
-    partial void OngroupChanging(string value);
-    partial void OngroupChanged();
-    partial void OndatatimeChanging(System.Nullable<System.DateTime> value);
-    partial void OndatatimeChanged();
-    #endregion
-		
-		public result()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", DbType="Int")]
-		public System.Nullable<int> id_user
-		{
-			get
-			{
-				return this._id_user;
-			}
-			set
-			{
-				if ((this._id_user != value))
-				{
-					this.Onid_userChanging(value);
-					this.SendPropertyChanging();
-					this._id_user = value;
-					this.SendPropertyChanged("id_user");
-					this.Onid_userChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_test", DbType="Int")]
-		public System.Nullable<int> id_test
-		{
-			get
-			{
-				return this._id_test;
-			}
-			set
-			{
-				if ((this._id_test != value))
-				{
-					this.Onid_testChanging(value);
-					this.SendPropertyChanging();
-					this._id_test = value;
-					this.SendPropertyChanged("id_test");
-					this.Onid_testChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_point", DbType="Int")]
-		public System.Nullable<int> point
-		{
-			get
-			{
-				return this._point;
-			}
-			set
-			{
-				if ((this._point != value))
-				{
-					this.OnpointChanging(value);
-					this.SendPropertyChanging();
-					this._point = value;
-					this.SendPropertyChanged("point");
-					this.OnpointChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[group]", Storage="_group", DbType="NChar(20)")]
-		public string group
-		{
-			get
-			{
-				return this._group;
-			}
-			set
-			{
-				if ((this._group != value))
-				{
-					this.OngroupChanging(value);
-					this.SendPropertyChanging();
-					this._group = value;
-					this.SendPropertyChanged("group");
-					this.OngroupChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_datatime", DbType="DateTime")]
-		public System.Nullable<System.DateTime> datatime
-		{
-			get
-			{
-				return this._datatime;
-			}
-			set
-			{
-				if ((this._datatime != value))
-				{
-					this.OndatatimeChanging(value);
-					this.SendPropertyChanging();
-					this._datatime = value;
-					this.SendPropertyChanged("datatime");
-					this.OndatatimeChanged();
 				}
 			}
 		}
@@ -931,6 +749,188 @@ namespace CodePuzzle
 					this._url = value;
 					this.SendPropertyChanged("url");
 					this.OnurlChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.result")]
+	public partial class result : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private System.Nullable<int> _id_user;
+		
+		private System.Nullable<int> _id_test;
+		
+		private System.Nullable<int> _point;
+		
+		private string _group;
+		
+		private string _datatime;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void Onid_userChanging(System.Nullable<int> value);
+    partial void Onid_userChanged();
+    partial void Onid_testChanging(System.Nullable<int> value);
+    partial void Onid_testChanged();
+    partial void OnpointChanging(System.Nullable<int> value);
+    partial void OnpointChanged();
+    partial void OngroupChanging(string value);
+    partial void OngroupChanged();
+    partial void OndatatimeChanging(string value);
+    partial void OndatatimeChanged();
+    #endregion
+		
+		public result()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", DbType="Int")]
+		public System.Nullable<int> id_user
+		{
+			get
+			{
+				return this._id_user;
+			}
+			set
+			{
+				if ((this._id_user != value))
+				{
+					this.Onid_userChanging(value);
+					this.SendPropertyChanging();
+					this._id_user = value;
+					this.SendPropertyChanged("id_user");
+					this.Onid_userChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_test", DbType="Int")]
+		public System.Nullable<int> id_test
+		{
+			get
+			{
+				return this._id_test;
+			}
+			set
+			{
+				if ((this._id_test != value))
+				{
+					this.Onid_testChanging(value);
+					this.SendPropertyChanging();
+					this._id_test = value;
+					this.SendPropertyChanged("id_test");
+					this.Onid_testChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_point", DbType="Int")]
+		public System.Nullable<int> point
+		{
+			get
+			{
+				return this._point;
+			}
+			set
+			{
+				if ((this._point != value))
+				{
+					this.OnpointChanging(value);
+					this.SendPropertyChanging();
+					this._point = value;
+					this.SendPropertyChanged("point");
+					this.OnpointChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[group]", Storage="_group", DbType="NChar(20)")]
+		public string group
+		{
+			get
+			{
+				return this._group;
+			}
+			set
+			{
+				if ((this._group != value))
+				{
+					this.OngroupChanging(value);
+					this.SendPropertyChanging();
+					this._group = value;
+					this.SendPropertyChanged("group");
+					this.OngroupChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_datatime", DbType="NChar(30)")]
+		public string datatime
+		{
+			get
+			{
+				return this._datatime;
+			}
+			set
+			{
+				if ((this._datatime != value))
+				{
+					this.OndatatimeChanging(value);
+					this.SendPropertyChanging();
+					this._datatime = value;
+					this.SendPropertyChanged("datatime");
+					this.OndatatimeChanged();
 				}
 			}
 		}

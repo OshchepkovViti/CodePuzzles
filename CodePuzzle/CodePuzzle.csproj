@@ -67,6 +67,7 @@
     <Compile Include="ChooseTest.Designer.cs">
       <DependentUpon>ChooseTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="cin.cs" />
     <Compile Include="ConectData.cs" />
     <Compile Include="CreateTest.cs">
       <SubType>Form</SubType>
