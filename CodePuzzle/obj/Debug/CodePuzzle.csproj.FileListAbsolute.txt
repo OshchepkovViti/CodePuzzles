@@ -40,3 +40,9 @@ C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\o
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.DelTest.resources
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.changePass.resources
 C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.TruTest.resources
+C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.changePass.resources
+C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.DelTest.resources
+C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.Result.resources
+C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.theory.resources
+C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.TruTest.resources
+C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.userres.resources

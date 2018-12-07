@@ -91,15 +91,34 @@ namespace CodePuzzle
         {
             string n = DateTime.Now.ToString();
             string r;
-            for(int i=0; i < dataGridView1.RowCount; i++)
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.ShowDialog();
+
+            using (StreamWriter w = new StreamWriter(dialog.FileName))
             {
-                r = "";
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    r = "";
+                    for (int j = 1; j < 6; j++)
+                    {
+                        w.WriteLine(textBox2.Text);
+
+                    }
+                }
+                w.Flush();
+                w.Close();
+            }
+
+
+            /* for(int i=0; i < dataGridView1.RowCount; i++)
+            {
+               r = "";
                 for (int j= 1; j < 6; j++)
                 {
                     r = dataGridView1.Rows[i].Cells[j].Value.ToString().Replace(" ", "") + "  ";
                 }
                 File.AppendAllText("result" + n + ".txt", Convert.ToString(r) + "\n");
-            }
+            }*/
             
         }
 
