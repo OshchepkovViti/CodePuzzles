@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Linq.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +89,18 @@ namespace CodePuzzle
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string n = DateTime.Now.ToString();
+            string r;
+            for(int i=0; i < dataGridView1.RowCount; i++)
+            {
+                r = "";
+                for (int j= 1; j < 6; j++)
+                {
+                    r = dataGridView1.Rows[i].Cells[j].Value.ToString().Replace(" ", "") + "  ";
+                }
+                File.AppendAllText("result" + n + ".txt", Convert.ToString(r) + "\n");
+            }
+            
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
