@@ -29,19 +29,39 @@ namespace CodePuzzle
         }
         public void Select()
         {
+            db = new linqDataContext();
+            if (user.access == 2)
+            {
+                var dbb = from t1 in db.result
+                          join t2 in db.users on t1.id_user equals t2.Id
+                          join t3 in db.test on t1.id_test equals t3.Id
+                          where (t2.Id == user.id_user) &&
+                          SqlMethods.Like(t1.datatime, "%" + textBox2.Text + "%") &&
+                          SqlMethods.Like(t2.surname, "%" + textBox1.Text + "%")
+                          &&
+                          SqlMethods.Like(t3.t_name, "%" + textBox3.Text + "%")
+                          select new { t1.Id, t2.name, t2.surname, t3.t_name, t3.theme, t1.point };
+                dataGridView1.DataSource = dbb;
+                headerText();
+            }
+
+            else
+            {
+                var dbb = from t1 in db.result
+                          join t2 in db.users on t1.id_user equals t2.Id
+                          join t3 in db.test on t1.id_test equals t3.Id
+                          where SqlMethods.Like(t1.datatime, "%" + textBox2.Text + "%") &&
+                          SqlMethods.Like(t2.surname, "%" + textBox1.Text + "%")
+                          &&
+                          SqlMethods.Like(t3.t_name, "%" + textBox3.Text + "%")
+                          select new { t1.Id, t2.name, t2.surname, t3.t_name, t3.theme, t1.point };
+                dataGridView1.DataSource = dbb;
+                headerText();
+            }
+
          
 
-            db = new linqDataContext();
-
-            var dbb = from t1 in db.result
-                      join t2 in db.users on t1.id_user equals t2.Id
-                      join t3 in db.test on t1.id_test equals t3.Id
-                      where SqlMethods.Like(t1.datatime, "%" + textBox2.Text + "%") &&
-                      SqlMethods.Like(t2.surname, "%" + textBox1.Text + "%")
-                      &&
-                      SqlMethods.Like(t3.t_name, "%" + textBox3.Text + "%")
-                      select new { t1.Id,t2.name,t2.surname, t3.t_name ,t3.theme, t1.point };
-            dataGridView1.DataSource = dbb;
+        
             headerText();
         }
         public void headerText()

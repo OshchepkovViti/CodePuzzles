@@ -127,7 +127,7 @@
             this.button6.BackColor = System.Drawing.Color.LemonChiffon;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Image = global::CodePuzzle.Properties.Resources.Config;
-            this.button6.Location = new System.Drawing.Point(171, 238);
+            this.button6.Location = new System.Drawing.Point(171, 237);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(115, 113);
             this.button6.TabIndex = 6;

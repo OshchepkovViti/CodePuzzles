@@ -46,6 +46,7 @@ namespace CodePuzzle
         private void theory_Load(object sender, EventArgs e)
         {
             Select();
+            if (user.access == 2) { groupBox2 .Visible= false;}
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

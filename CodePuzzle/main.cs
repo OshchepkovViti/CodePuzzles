@@ -22,10 +22,13 @@ namespace CodePuzzle
             
             pictureBox1.Image = Image.FromFile(@"img\i" + user.access + ".png");
             if (user.access == 0) { label1.Text = "Admim"; }
-            if (user.access == 1) { label1.Text = "Викладач"; }
-            if (user.access == 2) { label1.Text = "Студент"; }
+            if (user.access == 1) { label1.Text = "Викладач"; button5.Enabled = false; }
+            if (user.access == 2) { label1.Text = "Студент"; button5.Enabled = false; button6.Enabled = false; button4.Enabled = false; }
             label2.Text = user.surname; 
                label3.Text= user.name;
+
+
+
         }
 
         private void button9_Click(object sender, EventArgs e)
