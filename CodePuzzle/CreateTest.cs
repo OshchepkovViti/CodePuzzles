@@ -59,7 +59,7 @@ namespace CodePuzzle
                 pinfo.language = TestInf.language;
                 pinfo.theme = TestInf.theme;
                 pinfo.description = TestInf.descript;
-                pinfo.name = TestInf.name;
+                pinfo.t_name = TestInf.name;
             db.test.InsertOnSubmit(pinfo);
             db.SubmitChanges();
 

@@ -23,7 +23,7 @@
   <Table Name="dbo.test" Member="test">
     <Type Name="test">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
+      <Column Name="name" Member="t_name" Storage="_name" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
       <Column Name="lvl" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
       <Column Name="language" Type="System.String" DbType="NChar(80)" CanBeNull="true" />
       <Column Name="theme" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />

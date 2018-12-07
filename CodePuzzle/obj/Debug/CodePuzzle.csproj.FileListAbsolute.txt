@@ -34,3 +34,7 @@ C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle
 C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.csproj.CoreCompileInputs.cache
 C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.exe
 C:\Users\Oshchepkov\Documents\GitHub\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.pdb
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.Result.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.theory.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.userres.resources
+C:\Users\Viktor\Pictures\OshchepkovViktor_RobotChallage\CodePuzzles\CodePuzzle\obj\Debug\CodePuzzle.DelTest.resources

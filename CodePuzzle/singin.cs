@@ -31,6 +31,7 @@ namespace CodePuzzle
             user.access = Convert.ToInt32(uinfo.access);
             user.name = uinfo.name;
             user.surname = uinfo.surname;
+            user.pass = uinfo.password;
         }
 
             private void button1_Click(object sender, EventArgs e)

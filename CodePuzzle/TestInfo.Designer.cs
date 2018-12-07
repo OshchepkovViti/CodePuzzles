@@ -182,6 +182,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TestInfo";
             this.Text = "Інформація про тест";
+            this.Load += new System.EventHandler(this.TestInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

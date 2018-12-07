@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="changePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePass.Designer.cs">
+      <DependentUpon>changePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChooseTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="CreateTest.Designer.cs">
       <DependentUpon>CreateTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelTest.Designer.cs">
+      <DependentUpon>DelTest.cs</DependentUpon>
     </Compile>
     <Compile Include="DoTest.cs">
       <SubType>Form</SubType>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
     </Compile>
     <Compile Include="singin.cs">
       <SubType>Form</SubType>
@@ -114,18 +132,39 @@
     <Compile Include="TestInfo.Designer.cs">
       <DependentUpon>TestInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="theory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theory.Designer.cs">
+      <DependentUpon>theory.cs</DependentUpon>
+    </Compile>
     <Compile Include="user.cs" />
+    <Compile Include="userres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userres.Designer.cs">
+      <DependentUpon>userres.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="changePass.resx">
+      <DependentUpon>changePass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseTest.resx">
       <DependentUpon>ChooseTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateTest.resx">
       <DependentUpon>CreateTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DelTest.resx">
+      <DependentUpon>DelTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoTest.resx">
       <DependentUpon>DoTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="singin.resx">
       <DependentUpon>singin.cs</DependentUpon>
@@ -145,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestInfo.resx">
       <DependentUpon>TestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theory.resx">
+      <DependentUpon>theory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userres.resx">
+      <DependentUpon>userres.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="linq.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

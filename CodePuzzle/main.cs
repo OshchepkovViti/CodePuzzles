@@ -46,5 +46,30 @@ namespace CodePuzzle
             var fr = new ChooseTest();
             fr.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var fr = new Result();
+            fr.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var fr = new theory();
+            fr.Show();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var fr = new userres();
+            fr.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var fr = new DelTest();
+            fr.Show();
+        }
     }
 }

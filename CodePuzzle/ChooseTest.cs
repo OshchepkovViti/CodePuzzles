@@ -25,6 +25,7 @@ namespace CodePuzzle
         private void ChooseTest_Load(object sender, EventArgs e)
         {
             Select();
+            
         }
 
         public void Select()

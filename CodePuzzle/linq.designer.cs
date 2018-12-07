@@ -506,8 +506,8 @@ namespace CodePuzzle
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
+    partial void Ont_nameChanging(string value);
+    partial void Ont_nameChanged();
     partial void OnlvlChanging(string value);
     partial void OnlvlChanged();
     partial void OnlanguageChanging(string value);
@@ -543,8 +543,8 @@ namespace CodePuzzle
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NChar(80)")]
-		public string name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="name", Storage="_name", DbType="NChar(80)")]
+		public string t_name
 		{
 			get
 			{
@@ -554,11 +554,11 @@ namespace CodePuzzle
 			{
 				if ((this._name != value))
 				{
-					this.OnnameChanging(value);
+					this.Ont_nameChanging(value);
 					this.SendPropertyChanging();
 					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
+					this.SendPropertyChanged("t_name");
+					this.Ont_nameChanged();
 				}
 			}
 		}

@@ -31,6 +31,7 @@ namespace CodePuzzle
                     pinfo.login = textBox1.Text;
                     pinfo.password = textBox2.Text;
                     pinfo.name = textBox3.Text;
+                    pinfo.access = 2;
                     pinfo.surname = textBox4.Text;
                     db.users.InsertOnSubmit(pinfo);
                     db.SubmitChanges();

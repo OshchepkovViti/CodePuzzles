@@ -108,12 +108,15 @@ namespace CodePuzzle
                 dataGridView1.Columns[0].Visible = false;
                 dataGridView1.Columns[1].Visible = false;
                 dataGridView1.Columns[2].HeaderText = "code";
+                dataGridView1.Columns[2].Width = 400;
                 dataGridView2.ColumnCount = 4;
 
                 dataGridView2.Columns[0].Name = "id";
                 dataGridView2.Columns[1].Name = "Position";
                 dataGridView2.Columns[2].Name = "Code";
                 dataGridView2.Columns[3].Name = "pose";
+                
+                dataGridView2.Columns[2].Width = 400;
                 dataGridView2.Columns[0].Visible = false;
                 dataGridView2.Columns[1].Visible = false;
                 dataGridView2.Columns[2].HeaderText = "code";
@@ -132,13 +135,15 @@ namespace CodePuzzle
                 dataGridView1.Columns[0].Visible = false;
                 dataGridView1.Columns[1].Visible = false;
                 dataGridView1.Columns[2].HeaderText = "code";
-               
+                dataGridView1.Columns[2].Width = 400;
                 dataGridView2.ColumnCount = 7;
 
                 dataGridView2.Columns[0].Name = "id";
                 dataGridView2.Columns[1].Name = "Position";
                 dataGridView2.Columns[2].Name = "Code";
+                dataGridView2.Columns[2].Width = 200;
                 dataGridView2.Columns[3].Name = "Code2";
+                dataGridView2.Columns[3].Width = 200;
                 dataGridView2.Columns[4].Name = "id2";
                 dataGridView2.Columns[5].Name = "position2";
                 dataGridView2.Columns[6].Name = "pose";
