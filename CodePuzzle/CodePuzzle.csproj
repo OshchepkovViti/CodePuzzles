@@ -138,6 +138,12 @@
     <Compile Include="theory.Designer.cs">
       <DependentUpon>theory.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruTest.Designer.cs">
+      <DependentUpon>TruTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="user.cs" />
     <Compile Include="userres.cs">
       <SubType>Form</SubType>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="theory.resx">
       <DependentUpon>theory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruTest.resx">
+      <DependentUpon>TruTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userres.resx">
       <DependentUpon>userres.cs</DependentUpon>

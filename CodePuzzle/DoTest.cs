@@ -437,25 +437,47 @@ namespace CodePuzzle
                             {
                                 if (cell == 2)
                                 {
-                                    dataGridView2.Rows[row1].Cells[0].Value = row.Cells[0].Value;
-                                    dataGridView2.Rows[row1].Cells[1].Value = row.Cells[1].Value;
-                                    dataGridView2.Rows[row1].Cells[2].Value = row.Cells[2].Value;
+                                    if (selectCol==2)
+                                    {
+                                        dataGridView2.Rows[row1].Cells[0].Value = row.Cells[0].Value;
+                                        dataGridView2.Rows[row1].Cells[1].Value = row.Cells[1].Value;
+                                        dataGridView2.Rows[row1].Cells[2].Value = row.Cells[2].Value;
 
 
-                                    row.Cells[0].Value = cin.id;
-                                    row.Cells[1].Value = cin.position;
-                                    row.Cells[2].Value = cin.code;
+                                        row.Cells[0].Value = cin.id;
+                                        row.Cells[1].Value = cin.position;
+                                        row.Cells[2].Value = cin.code;
+                                    }
+
+                                    else
+                                    {
+                                        
+
+                                    }
+                                  
                                 }
                                 else
                                 {
-                                    dataGridView2.Rows[row1].Cells[0].Value = row.Cells[4].Value;
-                                    dataGridView2.Rows[row1].Cells[1].Value = row.Cells[5].Value;
-                                    dataGridView2.Rows[row1].Cells[2].Value = row.Cells[3].Value;
+
+                                    if (selectCol == 2)
+                                    {
+                                    }
+                                    else
+                                    {
+
+                                        dataGridView2.Rows[row1].Cells[4].Value = row.Cells[4].Value;
+                                        dataGridView2.Rows[row1].Cells[5].Value = row.Cells[5].Value;
+                                        dataGridView2.Rows[row1].Cells[3].Value = row.Cells[3].Value;
 
 
-                                    row.Cells[4].Value = cin.id;
-                                    row.Cells[5].Value = cin.position;
-                                    row.Cells[3].Value = cin.code;
+                                        row.Cells[4].Value = cin.id;
+                                        row.Cells[5].Value = cin.position;
+                                        row.Cells[3].Value = cin.code;
+                                    }
+                                    
+
+
+                                       
                                 }
                                 row1 = -1;
                                 grid = 0;
@@ -512,17 +534,24 @@ namespace CodePuzzle
                 sort2();
                 for (int i = 0; i < dataGridView2.RowCount; i++)
                 {
-                    if (Convert.ToInt32(dataGridView2.Rows[i].Cells[6].Value) == Convert.ToInt32(dataGridView2.Rows[i].Cells[1].Value))
+                    if (dataGridView2.Rows[i].Cells[1].Value.ToString().Replace(" ", "") != "")
                     {
-                        count++;
-                        dataGridView2.Rows[i].Cells[2].Style.BackColor = System.Drawing.Color.Lime;
+                        if (Convert.ToInt32(dataGridView2.Rows[i].Cells[6].Value) == Convert.ToInt32(dataGridView2.Rows[i].Cells[1].Value))
+                        {
+                            count++;
+                            dataGridView2.Rows[i].Cells[2].Style.BackColor = System.Drawing.Color.Lime;
 
+                        }
+                        else
+                        {
+                            dataGridView2.Rows[i].Cells[2].Style.BackColor = System.Drawing.Color.Red;
+                        }
                     }
                     else
                     {
+
                         dataGridView2.Rows[i].Cells[2].Style.BackColor = System.Drawing.Color.Red;
                     }
-
 
 
                 }
@@ -567,6 +596,8 @@ namespace CodePuzzle
            
             db.result.InsertOnSubmit(pinfo);
             db.SubmitChanges();
+            var fr = new TruTest();
+            fr.Show();
 
         }
         public void sort1()
