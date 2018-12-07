@@ -74,5 +74,11 @@ namespace CodePuzzle
             var fr = new DelTest();
             fr.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var fr = new changePass();
+            fr.Show();
+        }
     }
 }

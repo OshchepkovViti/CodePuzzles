@@ -23,7 +23,7 @@ namespace CodePuzzle
             try
             {
 
-                if (textBox1.Text == user.pass)
+                if (textBox1.Text == user.pass.Replace(" ",""))
                 {
                     if (textBox2.Text != "")
                     {
